@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore o Rio de Janeiro | Portal de Turismo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Configurações Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* BARRA DE NAVEGAÇÃO */
+        .navbar {
+            background-color: #1a365d;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar .logo {
+            font-size: 22px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar .logo i {
+            color: #00b4d8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00b4d8;
+        }
+
+        /* BANNER PRINCIPAL (HERO) */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+        }
+
+        /* CONTEÚDO PRINCIPAL (CONTAINER) */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* SEÇÃO SOBRE O ESTADO */
+        .about-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .about-section h2 {
+            color: #1a365d;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* QUADRICULADO DE PONTOS TURÍSTICOS (CARDS) */
+        .section-title {
+            color: #1a365d;
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+
+        .grid-lugares {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card-lugar {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card-lugar:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-lugar img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-info {
+            padding: 20px;
+        }
+
+        .card-info h3 {
+            color: #1a365d;
+            margin-bottom: 10px;
+        }
+
+        .card-info p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* RODAPÉ DO SITE */
+        footer {
+            background-color: #1a365d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-umbrella-beach"></i> RioTurismo
+        </div>
+        <div class="nav-links">
+            <a href="#sobre">Sobre</a>
+            <a href="#destinos">Destinos</a>
+            <a href="#contato">Contato</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Rio de Janeiro</h1>
+        <p>Descubra as praias deslumbrantes, a cultura vibrante e a energia contagiante da Cidade Maravilhosa.</p>
+    </header>
+
+    <main class="container">
+
+        <section id="sobre" class="about-section">
+            <h2><i class="fa-solid fa-circle-info"></i> Sobre o Estado</h2>
+            <p>
+                O Rio de Janeiro é um dos estados mais icônicos do Brasil, famoso internacionalmente por suas paisagens naturais deslumbrantes que misturam montanhas e mar. Além da capital maravilhosa, o estado conta com regiões incríveis como a Região dos Lagos (Búzios, Arraial do Cabo) e a Região Serrana (Petrópolis). É a terra do samba, da bossa nova e de uma culinária inigualável.
+            </p>
+        </section>
+
+        <h2 class="section-title" id="destinos">Pontos Turísticos Imperdíveis</h2>
+        
+        <div class="grid-lugares">
+            
+            <div class="card-lugar">
+                <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=500&q=80" alt="Cristo Redentor">
+                <div class="card-info">
+                    <h3>Cristo Redentor</h3>
+                    <p>Uma das Sete Maravilhas do Mundo Moderno, localizado no topo do Morro do Corcovado, de onde se tem a vista mais bonita da capital.</p>
+                </div>
+            </div>
+
+            <div class="card-lugar">
+                <img src="https://images.unsplash.com/photo-1516306580626-a221b777ea72?auto=format&fit=crop&w=500&q=80" alt="Pão de Açúcar">
+                <div class="card-info">
+                    <h3>Pão de Açúcar</h3>
+                    <p>O famoso passeio de bondinho interliga a Praia Vermelha ao Morro da Urca e ao Morro do Pão de Açúcar, proporcionando um pôr do sol inesquecível.</p>
+                </div>
+            </div>
+
+            <div class="card-lugar">
+                <img src="https://images.unsplash.com/photo-1498513926379-0755e6a12b99?auto=format&fit=crop&w=500&q=80" alt="Praia de Copacabana">
+                <div class="card-info">
+                    <h3>Praia de Copacabana</h3>
+                    <p>Com seu clássico calçadão de ondas em pedras portuguesas, é a praia mais famosa do mundo, ideal para uma caminhada ou uma água de coco gelada.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Portal RioTurismo. Criado para o GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
